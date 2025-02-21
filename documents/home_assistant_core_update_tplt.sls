@@ -1,0 +1,1 @@
+{{ state_attr('update.home_assistant_core_update','release_url') }}#{{state_attr('update.home_assistant_core_update','latest_version')|regex_replace(find='\.', replace='', ignorecase=False)}}---{{strptime(state_attr('update.home_assistant_core_update','latest_version'),"%Y.%m.%d","")|datetime_custom("%B",false,"")}}

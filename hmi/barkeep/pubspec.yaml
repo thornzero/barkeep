@@ -1,0 +1,77 @@
+name: barkeep
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.1+1
+
+environment:
+  sdk: ^3.1.1
+
+directories:
+  models: lib/models
+  screens: lib/screens
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0
+  neon: ^0.1.0
+  flutter_shaders: ^0.1.3
+  sound_effect: ^0.0.2
+  window_manager: ^0.4.3
+  flutter_riverpod: ^2.6.1
+  flutter_soloud: ^2.1.7
+  home_assistant: ^1.0.1
+  json_schema: ^5.2.0
+  media_kit: ^1.1.11
+  media_kit_video: ^1.2.5
+  media_kit_libs_video: ^1.0.5
+  audio_visualizer: ^1.1.0
+  metadata_god: ^1.0.0
+  mime: ^2.0.0
+  sqlite3: ^2.7.3
+  path: ^1.9.0
+  flutter_libserialport: ^0.5.0
+  mfrc522: ^0.0.5
+  watcher: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Orbitron
+      fonts:
+        - asset: fonts/Orbitron/static/Orbitron-Regular.ttf
+        - asset: fonts/Orbitron/static/Orbitron-Medium.ttf
+    - family: Pirata One
+      fonts:
+        - asset: fonts/Pirata_One/PirataOne-Regular.ttf
+    - family: Press Start 2P
+      fonts:
+        - asset: fonts/Press_Start_2P/PressStart2P-Regular.ttf
+    - family: Roboto Flex
+      fonts:
+        - asset: fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf
+
+  assets:
+    - assets/icons/
+    - assets/media/mewling_goat_tavern.gif
+    - assets/media/attractor_loop.mp4
+    - assets/media/click.mp3
+    - assets/media/homebg.jpg
+    - assets/media/settingsbg.jpg
+    - assets/media/foodanddrinkbg.png
+    - assets/media/entertainmentbg.png
+    - assets/media/atmospherebg.png
+    - assets/licenses/
+    - assets/schema/recipe.sch
+
+  shaders:
+    - assets/shaders/scanline.frag
+    - assets/shaders/crt.frag

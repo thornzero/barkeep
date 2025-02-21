@@ -1,0 +1,15 @@
+;paint.net Palette File
+;Downloaded from Lospec.com/palette-list
+;Palette Name: Ink-Crimson
+;Description: 10 colors picks with a bit of blues, for the court of the Crimson King!  Feel free to tag me (@inkpendude) on social media so I can share it too! I love to see what you guys do with this colors.
+;Colors: 10
+FFff0546
+FF9c173b
+FF660f31
+FF450327
+FF270022
+FF17001d
+FF09010d
+FF0ce6f2
+FF0098db
+FF1e579c

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3600pt" height="3600pt" version="1.1" viewBox="0 0 3600 3600" xmlns="http://www.w3.org/2000/svg">
+ <path d="m2550 150.05h900v2399.9h-299.95v-2100h-299.95v299.95h-600.05v300.09h-600.05v2100h-299.95v-2400h600.05v-299.95h599.9z" fill-rule="evenodd"/>
+ <path d="m2550 1650h600.05v300.09h-600.05z" fill-rule="evenodd"/>
+ <path d="m749.95 2250h600.05v299.95h-600.05z" fill-rule="evenodd"/>
+ <path d="m2250 2550v-599.9h299.95v599.9z" fill-rule="evenodd"/>
+ <path d="m450 3150v-600.05h299.95v600.05z" fill-rule="evenodd"/>
+ <path d="m3150 2850h-600.05v-300.09h600.05z" fill-rule="evenodd"/>
+ <path d="m1350 3450h-600.05v-299.95h600.05z" fill-rule="evenodd"/>
+ <path d="m450 1050v-900h299.95v900z" fill-rule="evenodd"/>
+ <path d="m1050 749.95h-900v-299.95h900z" fill-rule="evenodd"/>
+</svg>

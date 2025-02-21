@@ -1,0 +1,74 @@
+{
+    "recipe_name": "Jason Asano's Lemonade",
+    "notes": [
+        "Normal rank, common",
+        "Effect: refreshing"
+    ],
+    "steps": [
+        {
+            "step": "Wash lemons. If waxy, scrub under hot water."
+        },
+        {
+            "step": "Peel zest from lemons with veggie peeler. You want yellow, but it’s okay to get the white."
+        },
+        {
+            "step": "Cover zest with sugar and combine by tossing. Cover.",
+            "notes": [
+                "Leave for 2-12 hours."
+            ]
+        },
+        {
+            "step": "Bring 5 cups water to boil. Turn off heat."
+        },
+        {
+            "step": "Pour in lemon sugar mix including the peel.",
+            "notes": [
+                "Leave as sugars dissolve."
+            ]
+        },
+        {
+            "step": "Strain liquid to excise the peel."
+        },
+        {
+            "step": "Do not add lemon juice immediately. Let sugar water sit to cool off to room temperature. About ½ hour should do."
+        },
+        {
+            "step": "Cut the lemons in half and squeeze into bowl through strainer."
+        }
+    ],
+    "ingredients": [
+        {
+            "lemons, raw, wihout peel": {
+                "amounts": [
+                    {
+                        "amount": 6,
+                        "unit": "each"
+                    }
+                ],
+                "usda_num": 9150
+            }
+        },
+        {
+            "granulated sugar": {
+                "amounts": [
+                    {
+                        "amount": 1.25,
+                        "unit": "cups"
+                    }
+                ],
+                "usda_num": 19335
+            }
+        },
+        {
+            "water (plain tap or bottled)": {
+                "amounts": [
+                    {
+                        "amount": 5,
+                        "unit": "cups"
+                    }
+                ],
+                "usda_num": 14411
+            }
+        }
+    ]
+}

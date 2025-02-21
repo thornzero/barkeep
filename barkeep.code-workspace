@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../../../Repositories/barkeep"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true
+	}
+}
