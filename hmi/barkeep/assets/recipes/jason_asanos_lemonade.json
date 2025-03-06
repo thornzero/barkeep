@@ -18,6 +18,9 @@
             ]
         },
         {
+            "step": "Cut the lemons in half and squeeze into bowl through strainer."
+        },
+        {
             "step": "Bring 5 cups water to boil. Turn off heat."
         },
         {
@@ -31,9 +34,6 @@
         },
         {
             "step": "Do not add lemon juice immediately. Let sugar water sit to cool off to room temperature. About ½ hour should do."
-        },
-        {
-            "step": "Cut the lemons in half and squeeze into bowl through strainer."
         }
     ],
     "ingredients": [
