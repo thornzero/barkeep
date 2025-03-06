@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'dart:developer' as dev;
+import 'package:logging/logging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,6 +19,19 @@ const double navWidth = 256.0;
 const double navIconSize = 32.0;
 
 void main() async {
+  Logger.root.level = Level.FINE;
+  Logger.root.onRecord.listen((record) {
+    dev.log(
+      record.message,
+      time: record.time,
+      level: record.level.value,
+      name: record.loggerName,
+      zone: record.zone,
+      error: record.error,
+      stackTrace: record.stackTrace,
+    );
+    // TODO: if needed, forward to Sentry.io,Crashlytics, etc.
+  });
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 
