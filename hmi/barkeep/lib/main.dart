@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
 
-import 'package:flutter_soloud/flutter_soloud.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:window_manager/window_manager.dart';
 import 'dart:async';
 
@@ -125,24 +125,17 @@ class BarkeepUI extends ConsumerStatefulWidget {
 
 class _BarkeepUIState extends ConsumerState<BarkeepUI>
     with TickerProviderStateMixin {
-  ///
-  /// soundeffects audio variables
-  final soloud = SoLoud.instance;
-  AudioSource? clickSound;
-  SoundHandle? soundHandle;
+  late AudioPlayer sfx = AudioPlayer();
 
   Future<void> initializeAudioPlayer() async {
-    await soloud.init();
-    clickSound = await soloud.loadAsset(soundeffectClick);
+    sfx = AudioPlayer();
+    sfx.setReleaseMode(ReleaseMode.stop);
+    sfx.setPlayerMode(PlayerMode.lowLatency);
   }
 
-  Future<void> playSound(AudioSource source) async {
-    soundHandle = await soloud.play(source);
-  }
-
-  Future<void> disposeSound(AudioSource source) async {
-    await soloud.stop(soundHandle!);
-    await soloud.disposeSource(source);
+  Future<void> playSFX(String source) async {
+    await sfx.setSource(AssetSource(source));
+    await sfx.resume();
   }
 
   ///==========================================================================
@@ -158,7 +151,7 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
       page = destinations[selectedIndex].page;
       bgImage = destinations[selectedIndex].bgImage;
     });
-    playSound(clickSound!);
+    playSFX(soundeffectClick);
   }
 
   Widget navBar() {
@@ -225,7 +218,7 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
   @override
   void dispose() {
     focusNode.dispose();
-    disposeSound(clickSound!);
+    sfx.dispose();
     super.dispose();
   }
 
