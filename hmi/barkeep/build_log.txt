@@ -1,0 +1,522 @@
+[ +314 ms] Unable to locate an Android SDK.
+[  +99 ms] executing: uname -m
+[  +30 ms] Exit code 0 from: uname -m
+[   +1 ms] aarch64
+[ +563 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[  +38 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[  +10 ms] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +614 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[  +18 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +9 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[ +972 ms] Skipping pub get: version match.
+[ +599 ms] Found plugin audio_visualizer at /home/yagineko/.pub-cache/hosted/pub.dev/audio_visualizer-1.1.0/
+[  +85 ms] Found plugin audioplayers at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers-6.3.0/
+[  +42 ms] Found plugin audioplayers_android at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_android-5.1.0/
+[  +35 ms] Found plugin audioplayers_darwin at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_darwin-6.1.1/
+[  +31 ms] Found plugin audioplayers_linux at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_linux-4.1.1/
+[  +64 ms] Found plugin audioplayers_web at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_web-5.0.2/
+[  +37 ms] Found plugin audioplayers_windows at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_windows-4.1.1/
+[+1003 ms] Found plugin flutter_libserialport at /home/yagineko/.pub-cache/hosted/pub.dev/flutter_libserialport-0.5.0/
+[ +286 ms] Found plugin media_kit_libs_android_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_android_video-1.3.6/
+[  +13 ms] Found plugin media_kit_libs_ios_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_ios_video-1.1.4/
+[  +11 ms] Found plugin media_kit_libs_linux at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_linux-1.1.3/
+[   +9 ms] Found plugin media_kit_libs_macos_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_macos_video-1.1.4/
+[  +43 ms] Found plugin media_kit_libs_windows_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_windows_video-1.0.10/
+[  +15 ms] Found plugin media_kit_native_event_loop at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_native_event_loop-1.0.9/
+[  +37 ms] Found plugin media_kit_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_video-1.2.5/
+[  +48 ms] Found plugin metadata_god at /home/yagineko/.pub-cache/hosted/pub.dev/metadata_god-1.0.0/
+[  +63 ms] Found plugin package_info_plus at /home/yagineko/.pub-cache/hosted/pub.dev/package_info_plus-8.3.0/
+[  +37 ms] Found plugin path_provider at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[  +13 ms] Found plugin path_provider_android at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_android-2.2.16/
+[  +30 ms] Found plugin path_provider_foundation at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+[  +19 ms] Found plugin path_provider_linux at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[  +31 ms] Found plugin path_provider_windows at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[ +199 ms] Found plugin screen_brightness at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness-0.2.2+1/
+[  +27 ms] Found plugin screen_brightness_android at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_android-0.1.0+2/
+[   +7 ms] Found plugin screen_brightness_ios at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_ios-0.1.0/
+[  +22 ms] Found plugin screen_brightness_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_macos-0.1.0+1/
+[  +30 ms] Found plugin screen_brightness_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_windows-0.1.3/
+[  +19 ms] Found plugin screen_retriever at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever-0.2.0/
+[   +9 ms] Found plugin screen_retriever_linux at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.0/
+[  +16 ms] Found plugin screen_retriever_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.0/
+[  +18 ms] Found plugin screen_retriever_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.0/
+[  +28 ms] Found plugin sound_effect at /home/yagineko/.pub-cache/hosted/pub.dev/sound_effect-0.0.2/
+[ +202 ms] Found plugin volume_controller at /home/yagineko/.pub-cache/hosted/pub.dev/volume_controller-2.0.8/
+[  +21 ms] Found plugin wakelock_plus at /home/yagineko/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.10/
+[  +67 ms] Found plugin window_manager at /home/yagineko/.pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[ +231 ms] Found plugin audio_visualizer at /home/yagineko/.pub-cache/hosted/pub.dev/audio_visualizer-1.1.0/
+[  +21 ms] Found plugin audioplayers at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers-6.3.0/
+[   +8 ms] Found plugin audioplayers_android at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_android-5.1.0/
+[  +14 ms] Found plugin audioplayers_darwin at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_darwin-6.1.1/
+[   +9 ms] Found plugin audioplayers_linux at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_linux-4.1.1/
+[  +19 ms] Found plugin audioplayers_web at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_web-5.0.2/
+[   +8 ms] Found plugin audioplayers_windows at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_windows-4.1.1/
+[ +206 ms] Found plugin flutter_libserialport at /home/yagineko/.pub-cache/hosted/pub.dev/flutter_libserialport-0.5.0/
+[ +159 ms] Found plugin media_kit_libs_android_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_android_video-1.3.6/
+[   +7 ms] Found plugin media_kit_libs_ios_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_ios_video-1.1.4/
+[   +7 ms] Found plugin media_kit_libs_linux at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_linux-1.1.3/
+[   +6 ms] Found plugin media_kit_libs_macos_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_macos_video-1.1.4/
+[  +17 ms] Found plugin media_kit_libs_windows_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_windows_video-1.0.10/
+[   +7 ms] Found plugin media_kit_native_event_loop at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_native_event_loop-1.0.9/
+[  +16 ms] Found plugin media_kit_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_video-1.2.5/
+[  +17 ms] Found plugin metadata_god at /home/yagineko/.pub-cache/hosted/pub.dev/metadata_god-1.0.0/
+[  +50 ms] Found plugin package_info_plus at /home/yagineko/.pub-cache/hosted/pub.dev/package_info_plus-8.3.0/
+[  +22 ms] Found plugin path_provider at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[   +8 ms] Found plugin path_provider_android at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_android-2.2.16/
+[   +8 ms] Found plugin path_provider_foundation at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+[   +8 ms] Found plugin path_provider_linux at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[  +25 ms] Found plugin path_provider_windows at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[ +111 ms] Found plugin screen_brightness at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness-0.2.2+1/
+[   +7 ms] Found plugin screen_brightness_android at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_android-0.1.0+2/
+[  +14 ms] Found plugin screen_brightness_ios at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_ios-0.1.0/
+[  +16 ms] Found plugin screen_brightness_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_macos-0.1.0+1/
+[  +15 ms] Found plugin screen_brightness_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_windows-0.1.3/
+[  +13 ms] Found plugin screen_retriever at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever-0.2.0/
+[   +9 ms] Found plugin screen_retriever_linux at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.0/
+[   +8 ms] Found plugin screen_retriever_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.0/
+[  +23 ms] Found plugin screen_retriever_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.0/
+[  +15 ms] Found plugin sound_effect at /home/yagineko/.pub-cache/hosted/pub.dev/sound_effect-0.0.2/
+[ +107 ms] Found plugin volume_controller at /home/yagineko/.pub-cache/hosted/pub.dev/volume_controller-2.0.8/
+[   +7 ms] Found plugin wakelock_plus at /home/yagineko/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.10/
+[  +39 ms] Found plugin window_manager at /home/yagineko/.pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[ +652 ms] Building Linux application...
+[  +71 ms] executing: [build/linux/arm64/release/] cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DFLUTTER_TARGET_PLATFORM=linux-arm64 /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux
+[ +719 ms] -- The CXX compiler identification is Clang 11.0.1
+[  +39 ms] -- Detecting CXX compiler ABI info
+[ +634 ms] -- Detecting CXX compiler ABI info - done
+[  +41 ms] -- Check for working CXX compiler: /usr/bin/clang++ - skipped
+[   +2 ms] -- Detecting CXX compile features
+[   +4 ms] -- Detecting CXX compile features - done
+[  +28 ms] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[   +3 ms] -- Checking for module 'gtk+-3.0'
+[  +83 ms] --   Found gtk+-3.0, version 3.24.24
+[ +391 ms] -- Checking for module 'glib-2.0'
+[  +83 ms] --   Found glib-2.0, version 2.66.8
+[ +220 ms] -- Checking for module 'gio-2.0'
+[  +84 ms] --   Found gio-2.0, version 2.66.8
+[ +307 ms] -- Checking for module 'gstreamer-1.0'
+[  +88 ms] --   Found gstreamer-1.0, version 1.18.4
+[ +183 ms] -- Checking for module 'gstreamer-app-1.0'
+[  +65 ms] --   Found gstreamer-app-1.0, version 1.18.4
+[ +198 ms] -- Checking for module 'gstreamer-audio-1.0'
+[  +65 ms] --   Found gstreamer-audio-1.0, version 1.18.4
+[ +520 ms] -- The C compiler identification is Clang 11.0.1
+[  +21 ms] -- Detecting C compiler ABI info
+[ +385 ms] -- Detecting C compiler ABI info - done
+[  +37 ms] -- Check for working C compiler: /usr/bin/clang - skipped
+[   +1 ms] -- Detecting C compile features
+[   +1 ms] -- Detecting C compile features - done
+[   +6 ms] -- Downloading archive from https://github.com/microsoft/mimalloc/archive/refs/tags/v2.1.2.tar.gz...
+[+2010 ms] -- Downloaded archive to /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/mimalloc-2.1.2.tar.gz.
+[   +5 ms] -- /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/mimalloc-2.1.2.tar.gz Verification successful.
+[   +1 ms] -- Directory /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/mimalloc does not exist!
+[   +5 ms] -- Extracting mimalloc-2.1.2.tar.gz...
+[  +19 ms] -- Checking for module 'mpv'
+[  +45 ms] --   Found mpv, version 1.107.0
+[ +114 ms] -- Checking for module 'epoxy'
+[  +56 ms] --   Found epoxy, version 1.5.5
+[ +252 ms] -- Configuring done
+[ +195 ms] -- Generating done
+[  +40 ms] -- Build files have been written to: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release
+[  +65 ms] executing: ninja -C build/linux/arm64/release install
+[  +36 ms] ninja: Entering directory `build/linux/arm64/release'
+[ +639 ms] [1/33] Building C object plugins/flutter_libserialport/libserialport/CMakeFiles/serialport.dir/__/__/third_party/libserialport/linux_termios.c.o
+[+1089 ms] [2/33] Building C object plugins/flutter_libserialport/libserialport/CMakeFiles/serialport.dir/__/__/third_party/libserialport/timing.c.o
+[  +86 ms] [3/33] Building C object plugins/flutter_libserialport/libserialport/CMakeFiles/serialport.dir/__/__/third_party/libserialport/linux.c.o
+[+11519 ms] [4/33] Building C object plugins/flutter_libserialport/libserialport/CMakeFiles/serialport.dir/__/__/third_party/libserialport/serialport.c.o
+[ +280 ms] [5/33] Linking C shared library plugins/flutter_libserialport/libserialport/libserialport.so
+[+28781 ms] [6/33] Building CXX object plugins/media_kit_native_event_loop/shared/CMakeFiles/media_kit_native_event_loop.dir/media_kit_native_event_loop.cc.o
+[+1276 ms] [7/33] Linking CXX shared library plugins/media_kit_native_event_loop/shared/libmedia_kit_native_event_loop.so
+[+89835 ms] [8/33] Generating ../../mimalloc/out/release/mimalloc.o
+[   +2 ms] -- The C compiler identification is GNU 10.2.1
+[   +1 ms] -- The CXX compiler identification is GNU 10.2.1
+[   +2 ms] -- Detecting C compiler ABI info
+[   +4 ms] -- Detecting C compiler ABI info - done
+[        ] -- Check for working C compiler: /usr/bin/cc - skipped
+[   +1 ms] -- Detecting C compile features
+[        ] -- Detecting C compile features - done
+[        ] -- Detecting CXX compiler ABI info
+[        ] -- Detecting CXX compiler ABI info - done
+[  +15 ms] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[        ] -- Detecting CXX compile features
+[        ] -- Detecting CXX compile features - done
+[        ] -- 
+[        ] -- No build type selected, default to: Release
+[        ] -- Override standard malloc (MI_OVERRIDE=ON)
+[        ] -- 
+[        ] -- Library base name: mimalloc
+[        ] -- Version          : 2.1
+[        ] -- Build type       : release
+[        ] -- C Compiler       : /usr/bin/cc
+[  +11 ms] -- Compiler flags   : -Wall;-Wextra;-Wno-unknown-pragmas;-fvisibility=hidden;-Wstrict-prototypes;-ftls-model=initial-exec;-fno-builtin-malloc
+[   +4 ms] -- Compiler defines : 
+[   +3 ms] -- Link libraries   : /usr/lib/aarch64-linux-gnu/libpthread.so;/usr/lib/aarch64-linux-gnu/librt.so
+[  +17 ms] -- Build targets    : shared;static;object;tests
+[        ] -- 
+[        ] -- Configuring done
+[        ] -- Generating done
+[        ] -- Build files have been written to: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/mimalloc/out/release
+[        ] Scanning dependencies of target mimalloc
+[        ] [  2%] Building C object CMakeFiles/mimalloc.dir/src/alloc.c.o
+[        ] [  5%] Building C object CMakeFiles/mimalloc.dir/src/alloc-aligned.c.o
+[        ] [  7%] Building C object CMakeFiles/mimalloc.dir/src/alloc-posix.c.o
+[        ] [ 10%] Building C object CMakeFiles/mimalloc.dir/src/arena.c.o
+[   +9 ms] [ 12%] Building C object CMakeFiles/mimalloc.dir/src/bitmap.c.o
+[        ] [ 15%] Building C object CMakeFiles/mimalloc.dir/src/heap.c.o
+[        ] [ 17%] Building C object CMakeFiles/mimalloc.dir/src/init.c.o
+[        ] [ 20%] Building C object CMakeFiles/mimalloc.dir/src/options.c.o
+[        ] [ 22%] Building C object CMakeFiles/mimalloc.dir/src/os.c.o
+[        ] [ 25%] Building C object CMakeFiles/mimalloc.dir/src/page.c.o
+[        ] [ 27%] Building C object CMakeFiles/mimalloc.dir/src/random.c.o
+[        ] [ 30%] Building C object CMakeFiles/mimalloc.dir/src/segment.c.o
+[  +27 ms] [ 32%] Building C object CMakeFiles/mimalloc.dir/src/segment-map.c.o
+[   +6 ms] [ 35%] Building C object CMakeFiles/mimalloc.dir/src/stats.c.o
+[        ] [ 37%] Building C object CMakeFiles/mimalloc.dir/src/prim/prim.c.o
+[        ] [ 40%] Linking C shared library libmimalloc.so
+[        ] [ 40%] Built target mimalloc
+[        ] Scanning dependencies of target mimalloc-static
+[        ] [ 42%] Building C object CMakeFiles/mimalloc-static.dir/src/alloc.c.o
+[        ] [ 45%] Building C object CMakeFiles/mimalloc-static.dir/src/alloc-aligned.c.o
+[        ] [ 47%] Building C object CMakeFiles/mimalloc-static.dir/src/alloc-posix.c.o
+[        ] [ 50%] Building C object CMakeFiles/mimalloc-static.dir/src/arena.c.o
+[  +17 ms] [ 52%] Building C object CMakeFiles/mimalloc-static.dir/src/bitmap.c.o
+[        ] [ 55%] Building C object CMakeFiles/mimalloc-static.dir/src/heap.c.o
+[        ] [ 57%] Building C object CMakeFiles/mimalloc-static.dir/src/init.c.o
+[        ] [ 60%] Building C object CMakeFiles/mimalloc-static.dir/src/options.c.o
+[   +9 ms] [ 62%] Building C object CMakeFiles/mimalloc-static.dir/src/os.c.o
+[        ] [ 65%] Building C object CMakeFiles/mimalloc-static.dir/src/page.c.o
+[        ] [ 67%] Building C object CMakeFiles/mimalloc-static.dir/src/random.c.o
+[        ] [ 70%] Building C object CMakeFiles/mimalloc-static.dir/src/segment.c.o
+[        ] [ 72%] Building C object CMakeFiles/mimalloc-static.dir/src/segment-map.c.o
+[   +1 ms] [ 75%] Building C object CMakeFiles/mimalloc-static.dir/src/stats.c.o
+[        ] [ 77%] Building C object CMakeFiles/mimalloc-static.dir/src/prim/prim.c.o
+[        ] [ 80%] Linking C static library libmimalloc.a
+[        ] [ 80%] Built target mimalloc-static
+[  +16 ms] Scanning dependencies of target mimalloc-obj
+[        ] [ 82%] Building C object CMakeFiles/mimalloc-obj.dir/src/static.c.o
+[        ] [ 82%] Built target mimalloc-obj
+[        ] Scanning dependencies of target mimalloc-obj-target
+[        ] [ 85%] Generating mimalloc.o
+[   +1 ms] [ 85%] Built target mimalloc-obj-target
+[        ] Scanning dependencies of target mimalloc-test-api-fill
+[        ] [ 87%] Building C object CMakeFiles/mimalloc-test-api-fill.dir/test/test-api-fill.c.o
+[        ] [ 90%] Linking C executable mimalloc-test-api-fill
+[  +16 ms] [ 90%] Built target mimalloc-test-api-fill
+[        ] Scanning dependencies of target mimalloc-test-api
+[        ] [ 92%] Building C object CMakeFiles/mimalloc-test-api.dir/test/test-api.c.o
+[        ] [ 95%] Linking C executable mimalloc-test-api
+[        ] [ 95%] Built target mimalloc-test-api
+[   +1 ms] Scanning dependencies of target mimalloc-test-stress
+[        ] [ 97%] Building C object CMakeFiles/mimalloc-test-stress.dir/test/test-stress.c.o
+[        ] [100%] Linking C executable mimalloc-test-stress
+[        ] [100%] Built target mimalloc-test-stress
+[+178090 ms] [9/33] Generating /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/yagineko/Repositories/barkeep-1/hmi/barkeep/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
+[   +1 ms] [ +667 ms] Unable to locate an Android SDK.
+[        ] [ +247 ms] executing: uname -m
+[        ] [  +70 ms] Exit code 0 from: uname -m
+[   +1 ms] [   +1 ms] aarch64
+[        ] [+1449 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[   +5 ms] [   +1 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[   +1 ms] [  +20 ms] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +7 ms] [   +1 ms] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +1 ms] [  +29 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[  +13 ms] [  +52 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[  +11 ms] [   +1 ms] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[   +6 ms] [   +2 ms] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[   +1 ms] [+3279 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[   +8 ms] [  +13 ms] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[   +2 ms] [   +5 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [   +6 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [   +2 ms] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [   +8 ms] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [   +6 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [   +3 ms] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[  +26 ms] [  +18 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[   +1 ms] [  +10 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +2 ms] [  +38 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] [   +6 ms] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms] [   +2 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[   +9 ms] [   +1 ms] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[  +10 ms] [   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +1 ms] [   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +1 ms] [   +1 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +6 ms] [   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +7 ms] [   +3 ms] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [   +3 ms] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [+1182 ms] Initializing file store
+[        ] [ +694 ms] Skipping target: gen_localizations
+[   +1 ms] [ +358 ms] gen_dart_plugin_registrant: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/package_config_subset}
+[   +1 ms] [ +337 ms] unpack_linux: Starting due to {}
+[        ] [+1602 ms] unpack_linux: Complete
+[        ] [+4496 ms] Found plugin audio_visualizer at /home/yagineko/.pub-cache/hosted/pub.dev/audio_visualizer-1.1.0/
+[  +17 ms] [  +98 ms] Found plugin audioplayers at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers-6.3.0/
+[   +1 ms] [  +27 ms] Found plugin audioplayers_android at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_android-5.1.0/
+[   +4 ms] [  +37 ms] Found plugin audioplayers_darwin at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_darwin-6.1.1/
+[        ] [  +36 ms] Found plugin audioplayers_linux at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_linux-4.1.1/
+[   +9 ms] [  +53 ms] Found plugin audioplayers_web at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_web-5.0.2/
+[        ] [  +38 ms] Found plugin audioplayers_windows at /home/yagineko/.pub-cache/hosted/pub.dev/audioplayers_windows-4.1.1/
+[        ] [+1506 ms] Found plugin flutter_libserialport at /home/yagineko/.pub-cache/hosted/pub.dev/flutter_libserialport-0.5.0/
+[   +1 ms] [ +729 ms] Found plugin media_kit_libs_android_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_android_video-1.3.6/
+[        ] [  +12 ms] Found plugin media_kit_libs_ios_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_ios_video-1.1.4/
+[  +12 ms] [  +14 ms] Found plugin media_kit_libs_linux at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_linux-1.1.3/
+[   +1 ms] [  +13 ms] Found plugin media_kit_libs_macos_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_macos_video-1.1.4/
+[        ] [  +30 ms] Found plugin media_kit_libs_windows_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_libs_windows_video-1.0.10/
+[   +1 ms] [  +25 ms] Found plugin media_kit_native_event_loop at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_native_event_loop-1.0.9/
+[        ] [  +43 ms] Found plugin media_kit_video at /home/yagineko/.pub-cache/hosted/pub.dev/media_kit_video-1.2.5/
+[        ] [  +39 ms] Found plugin metadata_god at /home/yagineko/.pub-cache/hosted/pub.dev/metadata_god-1.0.0/
+[  +27 ms] [  +88 ms] Found plugin package_info_plus at /home/yagineko/.pub-cache/hosted/pub.dev/package_info_plus-8.3.0/
+[        ] [  +58 ms] Found plugin path_provider at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[        ] [  +28 ms] Found plugin path_provider_android at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_android-2.2.16/
+[   +9 ms] [  +22 ms] Found plugin path_provider_foundation at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+[   +1 ms] [  +21 ms] Found plugin path_provider_linux at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[        ] [  +18 ms] Found plugin path_provider_windows at /home/yagineko/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +9 ms] [ +176 ms] Found plugin screen_brightness at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness-0.2.2+1/
+[   +1 ms] [  +23 ms] Found plugin screen_brightness_android at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_android-0.1.0+2/
+[   +1 ms] [   +6 ms] Found plugin screen_brightness_ios at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_ios-0.1.0/
+[        ] [   +9 ms] Found plugin screen_brightness_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_macos-0.1.0+1/
+[  +18 ms] [  +10 ms] Found plugin screen_brightness_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_brightness_windows-0.1.3/
+[   +1 ms] [   +7 ms] Found plugin screen_retriever at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever-0.2.0/
+[        ] [   +6 ms] Found plugin screen_retriever_linux at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.0/
+[        ] [   +5 ms] Found plugin screen_retriever_macos at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.0/
+[   +6 ms] [   +9 ms] Found plugin screen_retriever_windows at /home/yagineko/.pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.0/
+[   +1 ms] [  +16 ms] Found plugin sound_effect at /home/yagineko/.pub-cache/hosted/pub.dev/sound_effect-0.0.2/
+[        ] [ +123 ms] Found plugin volume_controller at /home/yagineko/.pub-cache/hosted/pub.dev/volume_controller-2.0.8/
+[        ] [   +9 ms] Found plugin wakelock_plus at /home/yagineko/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.10/
+[        ] [  +46 ms] Found plugin window_manager at /home/yagineko/.pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[  +18 ms] [ +283 ms] gen_dart_plugin_registrant: Complete
+[        ] [  +18 ms] kernel_snapshot_program: Starting due to {}
+[  +29 ms] [ +115 ms] /home/yagineko/Bookshelf/flutter/bin/cache/dart-sdk/bin/dartaotruntime /home/yagineko/Bookshelf/flutter/bin/cache/dart-sdk/bin/snapshots/frontend_server_aot.dart.snapshot --sdk-root /home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk_product/ --target=flutter --no-print-incremental-dependencies -Ddart.vm.profile=false -Ddart.vm.product=true --delete-tostring-package-uri=dart:ui --delete-tostring-package-uri=package:flutter --aot --tfa --target-os linux --packages /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/package_config.json --output-dill /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/app.dill --depfile /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/kernel_snapshot_program.d --source file:///home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error package:barkeep/main.dart
+[   +1 ms] [+184270 ms] kernel_snapshot_program: Complete
+[        ] [+5113 ms] dart_build: Starting due to {}
+[  +11 ms] [  +19 ms] aot_elf_release: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/yagineko/Bookshelf/flutter/packages/flutter_tools/lib/src/build_system/targets/common.dart,/home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/app.dill,/home/yagineko/Bookshelf/flutter/bin/internal/engine.version,/home/yagineko/Bookshelf/flutter/bin/internal/engine.version,/home/yagineko/Bookshelf/flutter/bin/internal/engine.version}
+[   +2 ms] [  +24 ms] targetingApplePlatform = false
+[        ] [        ] extractAppleDebugSymbols = true
+[        ] [   +1 ms] Will strip AOT snapshot during build.
+[  +12 ms] [  +36 ms] executing: /home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64-release/gen_snapshot --deterministic --snapshot_kind=app-aot-elf --elf=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/app.so --strip /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/app.dill
+[   +1 ms] [ +695 ms] No packages with native assets. Skipping native assets compilation.
+[        ] [  +34 ms] dart_build: Complete
+[        ] [  +30 ms] install_code_assets: Starting due to {}
+[        ] [  +26 ms] Writing native assets json to file:///home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/native_assets.json.
+[  +13 ms] [  +48 ms] Writing /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/native_assets.json done.
+[        ] [  +16 ms] install_code_assets: Complete
+[        ] [+87928 ms] aot_elf_release: Complete
+[   +1 ms] [ +131 ms] linux_aot_bundle: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/.dart_tool/flutter_build/de944ca740c693e2e0d00869d330292f/app.so}
+[   +1 ms] [  +45 ms] linux_aot_bundle: Complete
+[        ] [ +116 ms] release_bundle_linux-arm64_assets: Starting due to {}
+[  +16 ms] [+1113 ms] Manifest contained wildcard assets. Inserting missing file into build graph to force rerun. for more information see #56466.
+[   +6 ms] [ +177 ms] shaderc command: [/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/impellerc, --sksl, --runtime-stage-gles, --runtime-stage-gles3, --runtime-stage-vulkan, --iplr, --sl=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/assets/shaders/scanline.frag, --spirv=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/assets/shaders/scanline.frag.spirv, --input=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/assets/shaders/scanline.frag, --input-type=frag, --include=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/assets/shaders, --include=/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/shader_lib]
+[  +39 ms] [   +3 ms] shaderc command: [/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/impellerc, --sksl, --runtime-stage-gles, --runtime-stage-gles3, --runtime-stage-vulkan, --iplr, --sl=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/assets/shaders/crt.frag, --spirv=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/assets/shaders/crt.frag.spirv, --input=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/assets/shaders/crt.frag, --input-type=frag, --include=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/assets/shaders, --include=/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/shader_lib]
+[   +7 ms] [  +67 ms] shaderc command: [/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/impellerc, --sksl, --runtime-stage-gles, --runtime-stage-gles3, --runtime-stage-vulkan, --iplr, --sl=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/shaders/ink_sparkle.frag, --spirv=/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/flutter_assets/shaders/ink_sparkle.frag.spirv, --input=/home/yagineko/Bookshelf/flutter/packages/flutter/lib/src/material/shaders/ink_sparkle.frag, --input-type=frag, --include=/home/yagineko/Bookshelf/flutter/packages/flutter/lib/src/material/shaders, --include=/home/yagineko/Bookshelf/flutter/bin/cache/artifacts/engine/linux-arm64/shader_lib]
+[        ] [+4245 ms] release_bundle_linux-arm64_assets: Complete
+[        ] [+3300 ms] Persisting file store
+[   +3 ms] [  +52 ms] Done persisting file store
+[        ] [  +49 ms] build succeeded.
+[   +4 ms] [  +42 ms] "flutter assemble" took 304,578ms.
+[        ] [  +48 ms] Running 1 shutdown hook
+[        ] [   +5 ms] Shutdown hooks complete
+[        ] [ +231 ms] exiting with code 0
+[+12924 ms] [10/33] Building CXX object CMakeFiles/barkeep.dir/main.cc.o
+[+2475 ms] [11/33] Building CXX object CMakeFiles/barkeep.dir/flutter/generated_plugin_registrant.cc.o
+[ +865 ms] [12/33] Building CXX object CMakeFiles/barkeep.dir/my_application.cc.o
+[+13516 ms] [13/33] Building CXX object plugins/flutter_libserialport/CMakeFiles/flutter_libserialport_plugin.dir/flutter_libserialport_plugin.cc.o
+[ +828 ms] [14/33] Building CXX object plugins/media_kit_libs_linux/CMakeFiles/media_kit_libs_linux_plugin.dir/media_kit_libs_linux_plugin.cc.o
+[ +476 ms] [15/33] Linking CXX shared library plugins/flutter_libserialport/libflutter_libserialport_plugin.so
+[ +622 ms] [16/33] Linking CXX shared library plugins/media_kit_libs_linux/libmedia_kit_libs_linux_plugin.so
+[+2194 ms] [17/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/media_kit_video_plugin.cc.o
+[+9504 ms] [18/33] Building CXX object plugins/audioplayers_linux/CMakeFiles/audioplayers_linux_plugin.dir/audio_player.cc.o
+[+3075 ms] [19/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/texture_sw.cc.o
+[+1105 ms] [20/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/texture_gl.cc.o
+[ +125 ms] [21/33] Building CXX object plugins/audioplayers_linux/CMakeFiles/audioplayers_linux_plugin.dir/audioplayers_linux_plugin.cc.o
+[+1047 ms] [22/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/video_output_manager.cc.o
+[ +442 ms] [23/33] Linking CXX shared library plugins/audioplayers_linux/libaudioplayers_linux_plugin.so
+[+9263 ms] [24/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/utils.cc.o
+[+3333 ms] [25/33] Building CXX object plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir/screen_retriever_linux_plugin.cc.o
+[ +811 ms] [26/33] Linking CXX shared library plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+[+2047 ms] [27/33] Building CXX object plugins/media_kit_video/CMakeFiles/media_kit_video_plugin.dir/video_output.cc.o
+[  +49 ms] [28/33] Building CXX object plugins/window_manager/CMakeFiles/window_manager_plugin.dir/window_manager_plugin.cc.o
+[ +588 ms] [29/33] Linking CXX shared library plugins/window_manager/libwindow_manager_plugin.so
+[  +33 ms] [30/33] Linking CXX shared library plugins/media_kit_video/libmedia_kit_video_plugin.so
+[+2391 ms] [31/33] Linking CXX executable intermediates_do_not_run/barkeep
+[+77239 ms] [32/33] Generating libmetadata_god.so, _phony_
+[        ] Resolving dependencies...
+[        ] Downloading packages...
+[        ] + adaptive_number 1.0.0
+[        ] + args 2.4.2 (2.6.0 available)
+[        ] + async 2.13.0
+[        ] + build_tool 1.0.0 from path /home/yagineko/.pub-cache/hosted/pub.dev/metadata_god-1.0.0/cargokit/build_tool
+[        ] + collection 1.18.0 (1.19.1 available)
+[        ] + convert 3.1.1 (3.1.2 available)
+[        ] + crypto 3.0.3 (3.0.6 available)
+[        ] + ed25519_edwards 0.3.1
+[        ] + fixnum 1.1.1
+[        ] + github 9.17.0 (9.24.0 available)
+[        ] + hex 0.2.0
+[        ] + http 1.1.0 (1.3.0 available)
+[        ] + http_parser 4.0.2 (4.1.2 available)
+[        ] + json_annotation 4.9.0
+[        ] + logging 1.2.0 (1.3.0 available)
+[        ] + meta 1.16.0
+[        ] + path 1.8.0 (1.9.1 available)
+[        ] + petitparser 5.4.0 (6.1.0 available)
+[        ] + source_span 1.10.0 (1.10.1 available)
+[        ] + string_scanner 1.4.1
+[   +1 ms] + term_glyph 1.2.2
+[        ] + toml 0.14.0 (0.16.0 available)
+[        ] + typed_data 1.4.0
+[   +1 ms] + version 3.0.0 (3.0.2 available)
+[        ] + yaml 3.1.2 (3.1.3 available)
+[        ] Changed 25 dependencies!
+[   +5 ms] 14 packages have newer versions incompatible with dependency constraints.
+[        ] Try `dart pub outdated` for more information.
+[        ] Compiling bin/build_tool_runner.dart to kernel file bin/build_tool_runner.dill.
+[   +2 ms] INFO: Precompiled binaries are disabled
+[        ] INFO: Building metadata_god for aarch64-unknown-linux-gnu
+[        ] [32/33] Install the project...
+[   +7 ms] -- Install configuration: "Release"
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/barkeep
+[   +1 ms] -- Set runtime path of "/home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/barkeep" to "$ORIGIN/lib"
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/icudtl.dat
+[   +5 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libflutter_linux_gtk.so
+[  +97 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libaudioplayers_linux_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libflutter_libserialport_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libserialport.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libmedia_kit_libs_linux_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libmedia_kit_video_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libscreen_retriever_linux_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libwindow_manager_plugin.so
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libmedia_kit_native_event_loop.so
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libmetadata_god.so
+[  +17 ms] -- Up-to-date: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets
+[   +7 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/version.json
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/AssetManifest.bin
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/NOTICES.Z
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/shaders
+[   +4 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/AssetManifest.json
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/NativeAssetsManifest.json
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Orbitron
+[   +4 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Orbitron/static
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Orbitron/static/Orbitron-Regular.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Orbitron/static/Orbitron-Medium.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Roboto_Flex
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Pirata_One
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Pirata_One/PirataOne-Regular.ttf
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Press_Start_2P
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+[   +5 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib
+[   +7 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Monoton
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Monoton/Monoton-Regular.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Night-Club-70s
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Night-Club-70s/Night-Club-70s-Bold.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Night-Club-70s/Night-Club-70s-Regular.ttf
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/TextMeOne
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/TextMeOne/TextMeOne-Regular.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Samarin
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Samarin/Samarin.ttf
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Automania
+[   +9 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Automania/Automania.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Membra
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Membra/Membra.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Beon
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Beon/Beon.otf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/LasEnter
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/LasEnter/LasEnter.ttf
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Cyberpunk
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/neon/lib/fonts/Cyberpunk/Cyberpunk.ttf
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/media_kit
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/media_kit/assets
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/media_kit/assets/web
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/media_kit/assets/web/hls1.4.10.js
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/wakelock_plus
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/wakelock_plus/assets
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/packages/wakelock_plus/assets/no_sleep.js
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/schema
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/schema/recipe.sch
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/shaders
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/shaders/crt.frag
+[   +5 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/shaders/scanline.frag
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/2-channels-ay-3-8912-baseless-bass-drum.wav
+[        ] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/synthwave-3840x2160-v0-zyjx3hc2ah3e1.webp
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/atmospherebg.png
+[ +103 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/hi-tech-error-alert-1.wav
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/success2.wav
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/attribution.txt
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/eurasian-nuthatch-boomklever.wav
+[   +6 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/homebg.jpg
+[  +37 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/click.mp3
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/another-retro-noise-hit.wav
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/foodanddrinkbg.png
+[  +35 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/mewling_goat_tavern_final.gif
+[  +20 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/entertainmentbg.png
+[  +30 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/click_116.wav
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/i-put-a-whole-bag-of-jellybeans.mp3
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/mewling_goat_tavern_improved.gif
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/sfx_massivelyincorrekt_04.wav
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/acquire.wav
+[   +5 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/synthwave-3840x2160-v0-wyn3ucq0ah3e1.webp
+[   +4 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/square-thing.wav
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/square-lowpass-bass.wav
+[   +1 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/mewling_goat_tavern.gif
+[ +248 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/settingsbg.jpg
+[  +39 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/gasp_ui_notification_6.wav
+[   +5 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/media/attractor_loop.mp4
+[  +25 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/licenses
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/licenses/freesound.lic
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/home.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/food.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/candle.svg
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/speaker.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/music.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/camera.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/settings.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/assets/icons/game.svg
+[   +2 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/data/flutter_assets/FontManifest.json
+[   +3 ms] -- Installing: /home/yagineko/Repositories/barkeep-1/hmi/barkeep/build/linux/arm64/release/bundle/lib/libapp.so
+[ +192 ms] Building Linux application... (completed in 465.4s)
+[  +14 ms] ✓ Built build/linux/arm64/release/bundle/barkeep
+[   +8 ms] "flutter linux" took 472,746ms.
+[  +51 ms] Running 1 shutdown hook
+[  +11 ms] Shutdown hooks complete
+[ +334 ms] exiting with code 0
