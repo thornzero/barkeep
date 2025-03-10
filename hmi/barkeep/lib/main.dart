@@ -44,7 +44,7 @@ void main() async {
 
   windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.setFullScreen(true); // Makes the app fullscreen
-    await windowManager.setAlwaysOnTop(true); // Ensures the app stays on top
+    // await windowManager.setAlwaysOnTop(true); // Ensures the app stays on top
     await windowManager.focus();
   });
 
