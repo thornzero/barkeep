@@ -23,9 +23,6 @@ dependencies:
   flutter_riverpod: ^2.6.1
   home_assistant: ^1.0.1
   json_schema: ^5.2.0
-  media_kit: ^1.1.11
-  media_kit_video: ^1.2.5
-  media_kit_libs_video: ^1.0.5
   audio_visualizer: ^1.1.0
   metadata_god: ^1.0.0
   mime: ^2.0.0
@@ -36,6 +33,8 @@ dependencies:
   watcher: ^1.1.1
   logging: ^1.3.0
   audioplayers: ^6.3.0
+  dart_periphery: ^0.9.17
+  logger: ^1.4.0
 
 dev_dependencies:
   flutter_test:

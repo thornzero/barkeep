@@ -1,9 +1,10 @@
 import 'dart:async';
+import 'dart:developer' as dev;
+import 'simple_ws1850s.dart';
 import 'package:flutter/material.dart';
-import 'package:mfrc522/mfrc522.dart';
 import 'themes.dart';
 
-const inProduction = false;
+const inProduction = true;
 
 class PageSkeleton extends StatefulWidget {
   const PageSkeleton({
@@ -33,12 +34,14 @@ class _PageSkeletonState extends State<PageSkeleton> {
   }
 
   Future<void> read() async {
-    final rfid = SimpleMfrc522();
+    var rfid = SimpleWS1850S();
     try {
       var result = await rfid.read();
       if (result.isNotEmpty) _cardId = result['id'];
+    } catch (e) {
+      dev.log('Error reading RFID: ${e.toString()}');
     } finally {
-      rfid.mfrc522.dispose();
+      rfid.dispose();
     }
   }
 

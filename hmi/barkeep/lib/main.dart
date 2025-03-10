@@ -15,7 +15,7 @@ import 'common/common.dart';
 
 const double screenHeight = 768.0;
 const double screenWidth = 1024.0;
-const double navWidth = 256.0;
+const double navWidth = 200.0;
 const double navIconSize = 32.0;
 
 void main() async {
@@ -30,7 +30,6 @@ void main() async {
       error: record.error,
       stackTrace: record.stackTrace,
     );
-    // TODO: if needed, forward to Sentry.io,Crashlytics, etc.
   });
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
@@ -186,18 +185,21 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
   /// keyboard variables
   late FocusNode focusNode;
 
-  void onKeyEvent(KeyEvent event) {
+  Future<void> onKeyEvent(KeyEvent event) async {
     if (event is KeyDownEvent) {
-      PhysicalKeyboardKey key = event.physicalKey;
-      if (key == PhysicalKeyboardKey.escape) {
-        setState(() {
-          exit(0);
-        });
-        //exit(0);
-      } else if (key == PhysicalKeyboardKey.pageDown) {
-        updatePage((selectedIndex + 1) % 5);
-      } else if (key == PhysicalKeyboardKey.pageUp) {
-        updatePage((selectedIndex - 1) % 5);
+      switch (event.physicalKey) {
+        case PhysicalKeyboardKey.escape:
+          setState(() {
+            exit(0);
+          });
+        case PhysicalKeyboardKey.pageDown:
+          updatePage((selectedIndex + 1) % 5);
+        case PhysicalKeyboardKey.pageUp:
+          updatePage((selectedIndex - 1) % 5);
+        case PhysicalKeyboardKey.home:
+          await windowManager.minimize();
+        default:
+          DoNothingAction(consumesKey: false);
       }
     }
   }
