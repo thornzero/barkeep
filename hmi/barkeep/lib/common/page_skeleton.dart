@@ -1,6 +1,5 @@
 import 'dart:async';
-import 'dart:developer' as dev;
-import 'simple_ws1850s.dart';
+import 'ws1850s.dart';
 import 'package:flutter/material.dart';
 import 'themes.dart';
 
@@ -37,9 +36,9 @@ class _PageSkeletonState extends State<PageSkeleton> {
     var rfid = SimpleWS1850S();
     try {
       var result = await rfid.read();
-      if (result.isNotEmpty) _cardId = result['id'];
+      if (result.isNotEmpty) _cardId = result['id'].toString();
     } catch (e) {
-      dev.log('Error reading RFID: ${e.toString()}');
+      print('Error reading RFID: ${e.toString()}');
     } finally {
       rfid.dispose();
     }

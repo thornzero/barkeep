@@ -82,7 +82,7 @@ packages:
     source: hosted
     version: "6.1.1"
   audioplayers_linux:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: audioplayers_linux
       sha256: "7f9b41c8b60b320041248617fca8f6f93da53899bd100c6d16fb225b5a91c138"

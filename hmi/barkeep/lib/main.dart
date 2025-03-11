@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:window_manager/window_manager.dart';
 import 'dart:async';
