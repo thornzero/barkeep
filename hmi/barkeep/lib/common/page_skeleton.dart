@@ -1,9 +1,15 @@
 import 'dart:async';
-import 'ws1850s.dart';
+import 'common.dart';
 import 'package:flutter/material.dart';
-import 'themes.dart';
 
 const inProduction = true;
+
+class PageTab {
+  final Tab tab;
+  final Widget child;
+
+  const PageTab(this.tab, this.child);
+}
 
 class PageSkeleton extends StatefulWidget {
   const PageSkeleton({
@@ -11,13 +17,13 @@ class PageSkeleton extends StatefulWidget {
     required this.icon,
     required this.title,
     this.body,
-    this.pageTabs,
+    this.pageTabs = const [],
   });
 
   final IconData icon;
   final String title;
   final Widget? body;
-  final Map<Tab, Widget>? pageTabs;
+  final List<PageTab> pageTabs;
 
   @override
   State<PageSkeleton> createState() => _PageSkeletonState();
@@ -100,7 +106,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
   @override
   Widget build(BuildContext context) {
     if (_isDialogOpen) {}
-    if (widget.pageTabs == null) {
+    if (widget.pageTabs.isEmpty) {
       return Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
@@ -128,7 +134,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
     } else {
       return DefaultTabController(
         initialIndex: 1,
-        length: widget.pageTabs!.length,
+        length: widget.pageTabs.length,
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -140,7 +146,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
             ),
             title: Text(widget.title, style: TextStyle(fontSize: 32.0)),
             bottom: TabBar(
-              tabs: widget.pageTabs!.keys.toList(),
+              tabs: widget.pageTabs.map((p) => p.tab).toList(),
             ),
             actions: <Widget>[
               Padding(
@@ -155,7 +161,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
             shape: InkCrimson.border,
           ),
           body: TabBarView(
-            children: widget.pageTabs!.values.toList(),
+            children: widget.pageTabs.map((p) => p.child).toList(),
           ),
         ),
       );

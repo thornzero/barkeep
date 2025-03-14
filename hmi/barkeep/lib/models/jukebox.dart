@@ -1,17 +1,42 @@
+import 'dart:io';
 import 'dart:math';
-import 'package:path/path.dart' as p;
 import 'package:watcher/watcher.dart';
 import 'package:flutter/material.dart';
 import 'package:audio_visualizer/audio_visualizer.dart';
 import 'package:audio_visualizer/utils.dart';
 import 'package:audio_visualizer/visualizers/audio_spectrum.dart';
 import 'package:audio_visualizer/visualizers/visualizers.dart';
-import 'package:metadata_god/metadata_god.dart';
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'database.dart';
 import '../common/common.dart';
 
+typedef Playlist = Map<String,AudioMetadata>;
+
+class QueueManager {
+  Playlist songs = {};
+  QueueManager(List<Path> selections){
+    var tracks = selections.where((element)=>
+        element.toString().contains("mp3") ||
+        element.toString().contains("mp4") ||
+        element.toString().contains("m4a") ||
+        element.toString().contains("flac") ||
+        element.toString().contains("ogg") ||
+        element.toString().contains("opus"))
+        .toList();
+      songs.add(tracks.map((track){
+        var metadata = readMetadata(track as File,getImage: true);
+        return {track:metadata};
+      }));
+    
+  }
+
+  void init(){
+
+  }
+}
+
 class JukeboxTab extends StatefulWidget {
-  const JukeboxTab({super.key});
+  const JukeboxTab();
 
   @override
   State<JukeboxTab> createState() => JukeboxTabState();
@@ -71,13 +96,13 @@ class JukeboxTabState extends State<JukeboxTab> {
     if (event.path.isNotEmpty) {
       switch (event.type) {
         case ChangeType.ADD:
-          db.createMetadata([event.path]);
+          
 
         case ChangeType.MODIFY:
-          db.updateMetadata(event.path);
+          
 
         case ChangeType.REMOVE:
-          db.deleteMetadata(event.path);
+          
 
         default:
           print('Music directory updated at ${event.path}');
@@ -92,10 +117,11 @@ class JukeboxTabState extends State<JukeboxTab> {
   }
 
   void _initalizePlaylist() {
-    db.createMetadata(_playlist);
+    
   }
 
   Widget playlistQueue() {
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

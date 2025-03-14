@@ -140,3 +140,11 @@ final ThemeData barkeepTheme = ThemeData(
   tabBarTheme: barkeepTabBarTheme,
   useMaterial3: true,
 );
+
+
+final Color cardBackground =
+        InkCrimson.surfaceVariantColor.withValues(alpha: 0.6);
+    
+const ShapeBorder cardShape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(40.0)),
+    );

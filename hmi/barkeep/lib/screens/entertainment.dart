@@ -1,7 +1,37 @@
 import 'package:flutter/material.dart';
-
 import '../common/common.dart';
 import '../models/jukebox.dart';
+
+enum EntertainmentTabs {
+  jukebox(Icon(Icons.music_note, size: 40),'Jukebox', JukeboxTab()),
+  theater(Icon(Icons.movie_creation, size: 40),'Theater',TheaterTab()),
+  games(Icon(Icons.gamepad, size: 40),'Games',GamesTab());
+
+  final Icon icon;
+  final String title;
+  final Widget body;
+
+  const EntertainmentTabs(this.icon,this.title,this.body);
+
+  static List<PageTab> pageTabs() => values
+      .map((t) => PageTab(
+            Tab(
+              icon: t.icon,
+              text: t.title,
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(cardPadding),
+                child: Card(
+                  shape: cardShape,
+                  color: cardBackground,
+                  child: t.body,
+                ),
+              ),
+            ),
+          ))
+      .toList();
+}
 
 class EntertainmentPage extends StatelessWidget {
   @override
@@ -9,21 +39,20 @@ class EntertainmentPage extends StatelessWidget {
     return PageSkeleton(
       icon: Icons.movie,
       title: 'Entertainment',
-      pageTabs: {
-        Tab(icon: Icon(Icons.music_note, size: 40), text: 'Jukebox'):
-            JukeboxTab(),
-        Tab(icon: Icon(Icons.movie_creation, size: 40), text: 'Theater'):
-            TheaterTab(),
-        Tab(icon: Icon(Icons.gamepad, size: 40), text: 'Games'): GamesTab(),
-      },
+      pageTabs: EntertainmentTabs.pageTabs(),
     );
   }
 }
 
-class TheaterTab extends StatelessWidget {
-  // todo: select movies
-  // todo: select shows
-  // todo: select music videos
+class TheaterTab extends StatefulWidget {
+  const TheaterTab();
+
+  @override
+  State<TheaterTab> createState() => _TheaterTabState();
+}
+
+class _TheaterTabState extends State<TheaterTab> {
+  // TODO: select movies
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,11 +61,26 @@ class TheaterTab extends StatelessWidget {
   }
 }
 
-class GamesTab extends StatelessWidget {
-  // todo: emulation consoles
-  // todo: pc games
-  // todo: arcade games
-  // todo: board games
+class GamesTab extends StatefulWidget {
+  const GamesTab();
+
+  // TODO: emulation consoles
+  // TODO: pc games
+  // TODO: arcade games
+  // TODO: board games
+
+  @override
+  State<GamesTab> createState() => _GamesTabState();
+}
+
+class _GamesTabState extends State<GamesTab>{
+  
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Container();
