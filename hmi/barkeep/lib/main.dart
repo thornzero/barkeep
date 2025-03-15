@@ -1,16 +1,16 @@
 import 'dart:io';
-import 'dart:developer' as dev;
-import 'package:logging/logging.dart';
+//import 'dart:developer' as dev;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:just_audio_media_kit/just_audio_media_kit.dart';
 import 'dart:async';
 
 import 'screens/screens.dart';
 import 'common/common.dart';
+import 'services/audio_manager.dart';
 
 const double screenHeight = 768.0;
 const double screenWidth = 1024.0;
@@ -18,18 +18,6 @@ const double navWidth = 200.0;
 const double navIconSize = 32.0;
 
 void main() async {
-  Logger.root.level = Level.FINE;
-  Logger.root.onRecord.listen((record) {
-    dev.log(
-      record.message,
-      time: record.time,
-      level: record.level.value,
-      name: record.loggerName,
-      zone: record.zone,
-      error: record.error,
-      stackTrace: record.stackTrace,
-    );
-  });
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 
@@ -46,7 +34,17 @@ void main() async {
     // await windowManager.setAlwaysOnTop(true); // Ensures the app stays on top
     await windowManager.focus();
   });
-
+  
+  JustAudioMediaKit.ensureInitialized(
+    linux:true,
+    windows: false,
+    android: false,
+    iOS: false,
+    macOS: false,
+  );
+  final audioManager = AudioManager();
+  audioManager.setVolume(normalVolumeLevel);
+  audioManager.setSfxVolume(normalSfxLevel);
   runApp(BarkeepApp());
 } // main
 
@@ -123,25 +121,15 @@ class BarkeepUI extends ConsumerStatefulWidget {
 
 class _BarkeepUIState extends ConsumerState<BarkeepUI>
     with TickerProviderStateMixin {
-  late AudioPlayer sfx = AudioPlayer();
-
-  Future<void> initializeAudioPlayer() async {
-    sfx = AudioPlayer();
-    sfx.setReleaseMode(ReleaseMode.stop);
-    sfx.setPlayerMode(PlayerMode.lowLatency);
-  }
-
-  Future<void> playSFX(String source) async {
-    await sfx.setSource(AssetSource(source));
-    await sfx.resume();
-  }
 
   ///==========================================================================
   /// navigation
   ///==========================================================================
   var selectedIndex = 0;
+  var audioManager = AudioManager();
   Widget page = HomePage();
   String bgImage = homeBackground;
+
 
   void updatePage(int index) {
     setState(() {
@@ -149,7 +137,7 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
       page = destinations[selectedIndex].page;
       bgImage = destinations[selectedIndex].bgImage;
     });
-    playSFX(soundeffectClick);
+    audioManager.sfx(soundeffectClick);
   }
 
   Widget navBar() {
@@ -213,13 +201,11 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       focusNode.requestFocus();
     });
-    initializeAudioPlayer();
   }
 
   @override
   void dispose() {
     focusNode.dispose();
-    sfx.dispose();
     super.dispose();
   }
 

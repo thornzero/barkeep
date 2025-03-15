@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../common/common.dart';
-import '../models/jukebox.dart';
+import '../widgets/jukebox_card.dart';
 
 enum EntertainmentTabs {
-  jukebox(Icon(Icons.music_note, size: 40),'Jukebox', JukeboxTab()),
+  jukebox(Icon(Icons.music_note, size: 40),'Jukebox', JukeboxCard()),
   theater(Icon(Icons.movie_creation, size: 40),'Theater',TheaterTab()),
   games(Icon(Icons.gamepad, size: 40),'Games',GamesTab());
 
@@ -22,11 +22,7 @@ enum EntertainmentTabs {
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(cardPadding),
-                child: Card(
-                  shape: cardShape,
-                  color: cardBackground,
-                  child: t.body,
-                ),
+                child: t.body,
               ),
             ),
           ))

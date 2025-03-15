@@ -17,8 +17,8 @@ sudo apt install -y git curl unzip xz-utils zip libglu1-mesa \
  clang cmake \
  ninja-build pkg-config \
  libgtk-3-dev liblzma-dev \
- libstdc++-12-dev
-
+ libstdc++-12-dev libmimalloc-dev \
+ libmimalloc2.0 libmpv-dev mpv
 
 
 echo "Checking if Flutter is already installed..."
@@ -34,6 +34,14 @@ if ! command -v flutter &> /dev/null; then
     echo "Flutter installed successfully!"
 else
     echo "Flutter is already installed. Skipping Installation."
+fi
+
+echo "Checking path for Chrome..."
+if [ -z ${CHROME_EXECUTABLE+x} ]; then echo "Chrome path is set. CHROME_EXECUTABLE=\$CHROME_EXECUTABLE";
+else
+    echo "Chrome path not set. setting CHROME_EXECUTABLE variable..."
+    echo "export CHROME_EXECUTABLE=/usr/bin/chromium"
+    echo "export CHROME_EXECUTABLE=/usr/bin/chromium" >> ~/.bashrc
 fi
 
 echo "Verifying Flutter installation..."
