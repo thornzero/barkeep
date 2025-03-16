@@ -137,7 +137,7 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
       page = destinations[selectedIndex].page;
       bgImage = destinations[selectedIndex].bgImage;
     });
-    audioManager.sfx(soundeffectClick);
+    audioManager.sfx(sfxNavBarSelectChange);
   }
 
   Widget navBar() {

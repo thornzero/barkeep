@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:barkeep/services/audio_manager.dart';
+
 import 'common.dart';
 import 'package:flutter/material.dart';
 
@@ -28,14 +30,22 @@ class PageSkeleton extends StatefulWidget {
   @override
   State<PageSkeleton> createState() => _PageSkeletonState();
 }
-
-class _PageSkeletonState extends State<PageSkeleton> {
+ 
+class _PageSkeletonState extends State<PageSkeleton> with SingleTickerProviderStateMixin {
   String _cardId = '';
   bool _isDialogOpen = false;
+  late TabController _tabController;
+  final AudioManager audioManager = AudioManager();
 
   @override
   void initState() {
     super.initState();
+    _tabController = TabController(length:widget.pageTabs.length,vsync: this );
+    _tabController.addListener((){
+      if (_tabController.indexIsChanging){
+        audioManager.play(sfxTabSelectChange);
+      }
+    });
   }
 
   Future<void> read() async {
@@ -100,6 +110,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
 
   @override
   void dispose() {
+    _tabController.dispose();
     super.dispose();
   }
 
@@ -132,10 +143,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
         body: widget.body,
       );
     } else {
-      return DefaultTabController(
-        initialIndex: 1,
-        length: widget.pageTabs.length,
-        child: Scaffold(
+      return Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor:
@@ -146,6 +154,7 @@ class _PageSkeletonState extends State<PageSkeleton> {
             ),
             title: Text(widget.title, style: TextStyle(fontSize: 32.0)),
             bottom: TabBar(
+              controller: _tabController,
               tabs: widget.pageTabs.map((p) => p.tab).toList(),
             ),
             actions: <Widget>[
@@ -161,10 +170,10 @@ class _PageSkeletonState extends State<PageSkeleton> {
             shape: InkCrimson.border,
           ),
           body: TabBarView(
+            controller: _tabController,
             children: widget.pageTabs.map((p) => p.child).toList(),
           ),
-        ),
-      );
+        );
     }
   }
 }
