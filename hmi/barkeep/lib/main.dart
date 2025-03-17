@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 //import 'dart:developer' as dev;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,9 +35,9 @@ void main() async {
     // await windowManager.setAlwaysOnTop(true); // Ensures the app stays on top
     await windowManager.focus();
   });
-  
+
   JustAudioMediaKit.ensureInitialized(
-    linux:true,
+    linux: true,
     windows: false,
     android: false,
     iOS: false,
@@ -121,23 +122,27 @@ class BarkeepUI extends ConsumerStatefulWidget {
 
 class _BarkeepUIState extends ConsumerState<BarkeepUI>
     with TickerProviderStateMixin {
-
-  ///==========================================================================
-  /// navigation
-  ///==========================================================================
   var selectedIndex = 0;
   var audioManager = AudioManager();
   Widget page = HomePage();
   String bgImage = homeBackground;
+  bool _hideCursor = false;
 
+  void _onTouchInput(PointerEvent event) {
+    return;
+  }
+
+  void _onRawMouseInput(PointerEvent event) {
+    return;
+  }
 
   void updatePage(int index) {
+    audioManager.sfx(sfxNavBarSelectChange);
     setState(() {
       selectedIndex = index;
       page = destinations[selectedIndex].page;
       bgImage = destinations[selectedIndex].bgImage;
     });
-    audioManager.sfx(sfxNavBarSelectChange);
   }
 
   Widget navBar() {
@@ -185,6 +190,10 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
           updatePage((selectedIndex - 1) % 5);
         case PhysicalKeyboardKey.home:
           await windowManager.minimize();
+        case PhysicalKeyboardKey.f4:
+          setState(() {
+            _hideCursor = !_hideCursor;
+          });
         default:
           DoNothingAction(consumesKey: false);
       }
@@ -212,39 +221,50 @@ class _BarkeepUIState extends ConsumerState<BarkeepUI>
   @override
   Widget build(BuildContext context) {
     return ScanlineShader(
-      child: KeyboardListener(
-        focusNode: focusNode,
-        onKeyEvent: onKeyEvent,
-        child: Scaffold(
-          body: Stack(
-            children: <Widget>[
-              OverflowBox(
-                minWidth: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  bgImage,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Row(children: <Widget>[
-                SafeArea(
-                  child: Container(
-                      decoration: BoxDecoration(
-                        border: InkCrimson.border,
-                      ),
-                      child: navBar()),
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: InkCrimson.border,
+      child: MouseRegion(
+        onEnter: _onRawMouseInput,
+        onHover: _onRawMouseInput,
+        onExit: _onRawMouseInput,
+        cursor:
+            _hideCursor ? SystemMouseCursors.none : SystemMouseCursors.basic,
+        child: Listener(
+          onPointerDown: _onTouchInput,
+          onPointerMove: _onRawMouseInput,
+          child: KeyboardListener(
+            focusNode: focusNode,
+            onKeyEvent: onKeyEvent,
+            child: Scaffold(
+              body: Stack(
+                children: <Widget>[
+                  OverflowBox(
+                    minWidth: MediaQuery.of(context).size.width,
+                    child: Image.asset(
+                      bgImage,
+                      fit: BoxFit.cover,
                     ),
-                    child: page,
                   ),
-                ),
-              ]),
-            ],
+                  Row(children: <Widget>[
+                    SafeArea(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            border: InkCrimson.border,
+                          ),
+                          child: navBar()),
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: InkCrimson.border,
+                        ),
+                        child: page,
+                      ),
+                    ),
+                  ]),
+                ],
+              ),
+              drawer: Drawer(),
+            ),
           ),
-          drawer: Drawer(),
         ),
       ),
     );
