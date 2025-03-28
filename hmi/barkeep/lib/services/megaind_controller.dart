@@ -100,6 +100,7 @@ class MegaIndController {
             i2c.writeByteReg(deviceAddress, register, brightness);
             sendPort
                 .send({"out": "LED $ledIndex Brightness Set to: $brightness"});
+            return;
 
           case 'startFlashing':
             int ledIndex = msg['led'];
