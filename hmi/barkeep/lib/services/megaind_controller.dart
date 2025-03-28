@@ -10,6 +10,12 @@ class ButtonMap {
     for (var b in Button.values) b: false,
   };
 
+  void setAll(ButtonMap other) {
+    for (var b in Button.values) {
+      this[b] = other[b];
+    }
+  }
+
   bool operator [](Button b) => _states[b]!;
   void operator []=(Button b, bool val) => _states[b] = val;
 
@@ -26,13 +32,14 @@ class MegaIndController {
   late SendPort _send;
 
   bool _isRunning = false;
+  List<bool> _ledStatus = [false, false, false, false];
 
-  final StreamController<ButtonMap> _input = StreamController.broadcast();
-  Stream<ButtonMap> get inputStream => _input.stream;
+  final ButtonMap buttonMap = ButtonMap();
+  final StreamController<ButtonMap> _buttonInputStream =
+      StreamController.broadcast();
+  Stream<ButtonMap> get buttonEvents => _buttonInputStream.stream;
 
   MegaIndController._internal();
-
-  static late final I2C _i2c;
 
   static const int deviceAddress = 0x50;
   static const int digitalInputRegister = 0x03;
@@ -44,10 +51,7 @@ class MegaIndController {
   static const double ainLowerLimit = 114.75;
   static const double ainUpperLimit = 140.25;
 
-  static const Duration inputPollingInterval = Duration(milliseconds: 50);
-
-  void init({int i2cBus = 1}) {
-    _i2c = I2C(i2cBus);
+  void init() {
     if (_isRunning) return;
     _isRunning = true;
     _receive = ReceivePort();
@@ -57,7 +61,11 @@ class MegaIndController {
         if (message is SendPort) {
           _send = message;
         } else if (message is ButtonMap) {
-          _input.add(message);
+          buttonMap.setAll(message);
+          _buttonInputStream.add(message);
+        } else if (message is Map<String, List<bool>> &&
+            message['ledStatus'] != null) {
+          _ledStatus = message['ledStatus'] as List<bool>;
         } else if (message is Map<String, dynamic> &&
             message['error'] != null) {
           dev.log("I2C Error: ${message['error']}");
@@ -70,6 +78,9 @@ class MegaIndController {
     final ReceivePort recvPort = ReceivePort();
     sendPort.send(recvPort.sendPort);
 
+    final I2C i2c = I2C(1);
+
+    const Duration inputPollingInterval = Duration(milliseconds: 50);
     List<bool> ledFlashing = [false, false, false, false];
     int digitalState = 0;
     double ain1, ain2 = 0.0;
@@ -86,33 +97,37 @@ class MegaIndController {
             int brightness = msg['lvl'];
             if (brightness < 0 || brightness > 100) break;
             int register = pwmLedOutputRegister[msg['led']];
-            _i2c.writeByteReg(deviceAddress, register, brightness);
+            i2c.writeByteReg(deviceAddress, register, brightness);
             sendPort
-                .send({"out", "LED $ledIndex Brightness Set to: $brightness"});
+                .send({"out": "LED $ledIndex Brightness Set to: $brightness"});
 
-          case 'StartFlashing':
+          case 'startFlashing':
             int ledIndex = msg['led'];
             int brightness = msg['lvl'];
             if (brightness < 0 || brightness > 100) break;
             Duration interval = Duration(seconds: msg['int']);
             int prevBrightness = 0;
+            ledFlashing[ledIndex] = true;
             while (ledFlashing[ledIndex]) {
               prevBrightness = prevBrightness > 0 ? brightness : 0;
               int register = pwmLedOutputRegister[msg['led']];
-              _i2c.writeByteReg(deviceAddress, register, brightness);
+              i2c.writeByteReg(deviceAddress, register, brightness);
               sendPort.send(
-                  {"out", "LED $ledIndex Brightness Set to: $brightness"});
+                  {"out": "LED $ledIndex Brightness Set to: $brightness"});
               await Future.delayed(interval);
             }
+            return;
 
-          case 'StopFlashing':
+          case 'stopFlashing':
             ledFlashing[msg['led']] = false;
+            return;
 
           case 'setFanSpeed':
             int speed = msg['lvl'];
             if (speed < 0 || speed > 100) break;
-            _i2c.writeByteReg(deviceAddress, pwmFanOutputRegister, speed);
-            sendPort.send({"out", "Fan Speed Set to: $speed"});
+            i2c.writeByteReg(deviceAddress, pwmFanOutputRegister, speed);
+            sendPort.send({"out": "Fan Speed Set to: $speed"});
+            return;
         }
       }
     });
@@ -121,7 +136,7 @@ class MegaIndController {
       try {
         // opto digital inputs
         digitalState =
-            ~_i2c.readByteReg(deviceAddress, digitalInputRegister) & 0x0F;
+            ~i2c.readByteReg(deviceAddress, digitalInputRegister) & 0x0F;
         buttonMap
           ..[Button.a] = (digitalState >> 0) & 1 == 1
           ..[Button.b] = (digitalState >> 1) & 1 == 1
@@ -129,8 +144,8 @@ class MegaIndController {
           ..[Button.y] = (digitalState >> 3) & 1 == 1;
 
         // analog 0-10v inputs
-        ain1 = _i2c.readWordReg(deviceAddress, analogInputRegister1) / 1.0;
-        ain2 = _i2c.readWordReg(deviceAddress, analogInputRegister2) / 1.0;
+        ain1 = i2c.readWordReg(deviceAddress, analogInputRegister1) / 1.0;
+        ain2 = i2c.readWordReg(deviceAddress, analogInputRegister2) / 1.0;
 
         // Read analog inputs (detect button presses at ~5V(~128.0) threshold)
         buttonMap
@@ -138,24 +153,55 @@ class MegaIndController {
           ..[Button.down] = (ain2 > ainLowerLimit && ain2 < ainUpperLimit);
 
         sendPort.send(buttonMap);
+        sendPort.send({'ledStatus': ledFlashing});
       } catch (e) {
         sendPort.send({'error': e.toString()});
       }
-      await Future.delayed(Duration(milliseconds: 50));
+      await Future.delayed(inputPollingInterval);
     }
   }
 
-  void toggleFlashingButton(int led, {int brightness = 40, int interval = 1}) {
+  void startFlashingButton(int led, {int brightness = 40, int interval = 1}) {
     _send.send({
-      'cmd': 'flashButton',
+      'cmd': 'startFlashing',
       'led': led,
       'lvl': brightness,
       'int': interval,
     });
   }
 
+  void stopFlashingButton(int led) {
+    _send.send({
+      'cmd': 'stopFlashing',
+      'led': led,
+    });
+  }
+
+  void toggleFlashingButton(int led, {int brightness = 40, int interval = 1}) {
+    if (_ledStatus[led]) {
+      stopFlashingButton(led);
+    } else {
+      startFlashingButton(
+        led,
+        brightness: brightness,
+        interval: interval,
+      );
+    }
+  }
+
   void lightButton(int led, {int brightness = 40}) {
-    _send.send({'cmd': 'lightButton'});
+    _send.send({
+      'cmd': 'lightButton',
+      'led': led,
+      'lvl': brightness,
+    });
+  }
+
+  void setFanSpeed(int speed) {
+    _send.send({
+      'cmd': 'setFanSpeed',
+      'lvl': speed,
+    });
   }
 
   void dispose() {
