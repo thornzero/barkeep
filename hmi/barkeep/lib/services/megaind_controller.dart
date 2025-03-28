@@ -39,19 +39,7 @@ class MegaIndController {
       StreamController.broadcast();
   Stream<ButtonMap> get buttonEvents => _buttonInputStream.stream;
 
-  MegaIndController._internal();
-
-  static const int deviceAddress = 0x50;
-  static const int digitalInputRegister = 0x03;
-  static const int analogInputRegister1 = 0x1C;
-  static const int analogInputRegister2 = 0x1E;
-  static const int pwmFanOutputRegister = 0x14;
-  static const List<int> pwmLedOutputRegister = [0x16, 0x18];
-
-  static const double ainLowerLimit = 114.75;
-  static const double ainUpperLimit = 140.25;
-
-  void init() {
+  MegaIndController._internal() {
     if (_isRunning) return;
     _isRunning = true;
     _receive = ReceivePort();
@@ -80,7 +68,19 @@ class MegaIndController {
 
     final I2C i2c = I2C(1);
 
+    const int deviceAddress = 0x50;
+    const int digitalInputRegister = 0x03;
+    const int analogInputRegister1 = 0x1C;
+    const int analogInputRegister2 = 0x1E;
+    const int pwmFanOutputRegister = 0x14;
+    const List<int> pwmLedOutputRegister = [0x16, 0x18];
+
+    const double ainLowerLimit = 0.4;
+    const double ainUpperLimit = 0.6;
+    const double maxAnalogValue = 255.0;
+
     const Duration inputPollingInterval = Duration(milliseconds: 50);
+
     List<bool> ledFlashing = [false, false, false, false];
     int digitalState = 0;
     double ain1, ain2 = 0.0;
@@ -106,17 +106,22 @@ class MegaIndController {
             int ledIndex = msg['led'];
             int brightness = msg['lvl'];
             if (brightness < 0 || brightness > 100) break;
+
             Duration interval = Duration(seconds: msg['int']);
-            int prevBrightness = 0;
+            bool isOn = false;
+
             ledFlashing[ledIndex] = true;
+
             while (ledFlashing[ledIndex]) {
-              prevBrightness = prevBrightness > 0 ? brightness : 0;
+              isOn = !isOn;
               int register = pwmLedOutputRegister[msg['led']];
-              i2c.writeByteReg(deviceAddress, register, brightness);
+
+              i2c.writeByteReg(deviceAddress, register, isOn ? brightness : 0);
               sendPort.send(
                   {"out": "LED $ledIndex Brightness Set to: $brightness"});
               await Future.delayed(interval);
             }
+
             return;
 
           case 'stopFlashing':
@@ -126,6 +131,7 @@ class MegaIndController {
           case 'setFanSpeed':
             int speed = msg['lvl'];
             if (speed < 0 || speed > 100) break;
+
             i2c.writeByteReg(deviceAddress, pwmFanOutputRegister, speed);
             sendPort.send({"out": "Fan Speed Set to: $speed"});
             return;
@@ -144,9 +150,11 @@ class MegaIndController {
           ..[Button.x] = (digitalState >> 2) & 1 == 1
           ..[Button.y] = (digitalState >> 3) & 1 == 1;
 
-        // analog 0-10v inputs
-        ain1 = i2c.readWordReg(deviceAddress, analogInputRegister1) / 1.0;
-        ain2 = i2c.readWordReg(deviceAddress, analogInputRegister2) / 1.0;
+        // Raw normalized analog value, 0.0-1.0 (0.5 ~ 5V)
+        ain1 = i2c.readWordReg(deviceAddress, analogInputRegister1) /
+            maxAnalogValue;
+        ain2 = i2c.readWordReg(deviceAddress, analogInputRegister2) /
+            maxAnalogValue;
 
         // Read analog inputs (detect button presses at ~5V(~128.0) threshold)
         buttonMap
