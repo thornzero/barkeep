@@ -159,6 +159,7 @@ class MegaIndController {
       }
       await Future.delayed(inputPollingInterval);
     }
+    i2c.dispose();
   }
 
   void startFlashingButton(int led, {int brightness = 40, int interval = 1}) {
@@ -210,6 +211,5 @@ class MegaIndController {
       _isolate.kill(priority: Isolate.immediate);
       _receive.close();
     }
-    _i2c.dispose();
   }
 }
