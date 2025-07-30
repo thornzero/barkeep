@@ -1,59 +1,127 @@
 # Barkeep
 
-A tavern bartender app for the food, drinks, and jukebox user interface.
+A terminal-based bar/tavern management system built with Go and Charm Bracelet libraries.
 
-## Recommended IDE Setup
+## Overview
 
-- [VSCodium](https://vscodium.com/)
-- [Flutter VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
-    - `$ ext install Dart-Code.flutter ~`
+Barkeep is a modern TUI (Terminal User Interface) application designed for managing a bar or tavern system. It provides an intuitive keyboard-driven interface for:
 
-## Display Data
+- **Music Management**: Jukebox functionality with directory browsing, queue management, and audio playback
+- **Food & Drink**: Order management and kitchen integration
+- **Atmosphere Control**: Environmental controls and lighting management
+- **Entertainment**: Games, media, and interactive features
+- **Hardware Integration**: RFID authentication and industrial automation support
 
-| Item                       | Unit                             | Specifications                              |
-| :------------------------- | :------------------------------- | :------------------------------------------ |
-| Manufacturer               |                                  | Sharp                                       |
-| Model                      |                                  | LQ150X1LG81                                 |
-| Display Type               |                                  | LCD                                         |
-| Screen Size                | ***inch***                       | 15                                          |
-| Native Resolution          | ***Pixel Width x Pixel Height*** | 1024 X 768                                  |
-| Active Area                | ***mm***                         | 304.1(H) X 228.1(V)                         |
-| Outline dimension          | ***mm***                         | 326.0(W) X 252.0(H) X 11.2(D)               |
-| Bolt Hole Dimension        | ***mm***                         | 200 X 200                                   |
-| Input Voltage VDD          | ***Volt***                       | 3.3V                                        |
-| Screen Wire Harness        |                                  | DF14-20P-1LVDS                              |
-| Electrical Interface       |                                  | LVDS(6-bit), P20: 6 Bit=O/NC, 8 Bit=H(3.3V) |
-| White Luminance            | ***cd/m²***                      | 350                                         |
-| Contrast Ratio             |                                  | 550:1                                       |
-| BackLight Connector        |                                  | BHR-03VS-1X2                                |
-| Backlight Inverter         |                                  | Substitute MS179DI                          |
-| Response time, Rising      | ***msec***                       | 2                                           |
-| Response time, Falling     | ***msec***                       | 6                                           |
-| Viewing Angle - Horizontal | ***degree***                     | 45                                          |
-| Viewing Angle - Vertical   | ***degree***                     | 60                                          |
-| LCD controller kit         |                                  | DF14-20P-1LVDS_1024X768-6B                  |
-| LED Backlight kit          |                                  | UB36318LED6420X2                            |
+## Features
 
-## Design Prompt
+- **Beautiful TUI**: Built with Charm Bracelet (Bubble Tea, Lip Gloss, Bubbles)
+- **Retro Aesthetic**: Custom "Ink Crimson" color scheme inspired by cyberpunk themes
+- **Audio System**: Full music playback with sound effects and queue management
+- **Hardware Support**: RFID card authentication and industrial automation integration
+- **Keyboard Navigation**: Optimized for kiosk and embedded systems
 
-a carousel menu system as part of a tavern user interface to the barkeep. Allows patrons to select:
+## Tech Stack
 
-- browse dining options
-    - food
-    - drinks
-- change atmosphere
-    - lighting
-    - temperature
-- select entertainment
-    - jukebox
-        - queue playlists
-        - queue songs
-    - theater
-        - select movies
-        - select shows
-        - select music videos
-    - games
-        - emulation consoles
-        - pc games
-        - arcade games
-        - board games
+- **Go**: Core application language
+- **Bubble Tea**: TUI framework for event handling and state management
+- **Lip Gloss**: Styling and theming system
+- **Bubbles**: Pre-built UI components
+
+## Project Structure
+
+```tree
+barkeep/
+├── assets/          # Static assets and media files
+│   ├── fonts/       # Font files (Orbitron, Press Start 2P, etc.)
+│   ├── icons/       # SVG icons
+│   ├── media/       # Background images and media
+│   ├── recipes/     # Recipe data and schemas
+│   ├── schemas/     # Data schemas
+│   └── sounds/      # Sound effects and audio files
+├── documents/       # Hardware documentation and reference materials
+└── README.md
+```
+
+## Hardware Integration
+
+The system supports integration with industrial automation hardware:
+
+- RFID card readers for user authentication
+- Industrial Automation Cards (megaind) for hardware control
+- Audio hardware for music and sound effects
+- Touchscreen and keyboard input support
+
+## Development Status
+
+This project is currently being converted from a Flutter application to a Go + Charm Bracelet TUI application. The conversion preserves all original functionality while providing a more lightweight and keyboard-driven interface.
+
+## Original Features (Being Converted)
+
+- Multi-screen navigation (Home, Food & Drink, Atmosphere, Entertainment, Settings)
+- Audio management with jukebox functionality
+- RFID authentication system
+- Custom theming with retro cyberpunk aesthetic
+- Hardware integration capabilities
+- Kiosk mode for embedded systems
+
+## Getting Started
+
+### Building and Running
+
+```bash
+# Build the application
+make build
+
+# Run in full-screen mode
+make run
+# or
+make fullscreen
+
+# Run in development mode
+make dev
+
+# Quick development cycle
+make quick
+```
+
+### Full-Screen Mode
+
+Barkeep runs in full-screen mode using the terminal's alternate screen buffer. This provides:
+
+- **Clean interface**: No terminal history interference
+- **Proper restoration**: Terminal state is restored on exit
+- **Responsive layout**: Adapts to any terminal size
+- **Immersive experience**: Full-screen tavern management
+
+### Exit Options
+
+The application provides multiple ways to exit gracefully:
+
+#### Graceful Exit (Recommended)
+
+- Press **`q`** - Shows confirmation dialog
+- Press **`y`** to confirm exit or **`n`** to cancel
+- Includes proper cleanup of audio and resources
+
+#### Immediate Exit
+
+- Press **`Ctrl+C`** - Immediate exit without confirmation
+- Signal handling ensures proper cleanup
+
+#### Emergency Exit
+
+- Terminal close or kill signal - Automatic cleanup
+
+### Navigation
+
+- **`←` `→`** or **`h` `l`** - Navigate carousel on home screen
+- **`1-5`** - Quick access to screens
+- **`Tab`** - Focus navigation sidebar
+- **`Enter`** - Select current item
+- **`Esc`** - Return to home screen
+- **`h`** or **`?`** - Toggle help
+- **`q`** - Quit (with confirmation)
+
+## License
+
+> License information to be updated

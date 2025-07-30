@@ -1,2 +1,0 @@
-xinput set-prop "SLT Digital USB TouchController" "Coordinate Transformation Matrix" 0 -1 1  1 0 0  0 0 1
-xinput set-prop "SLT Digital USB TouchController" "libinput Calibration Matrix" 1.389 0 -0.185 0 1.289 -0.13 0 0 1
